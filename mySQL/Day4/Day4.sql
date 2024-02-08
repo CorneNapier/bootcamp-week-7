@@ -208,14 +208,32 @@ select * from employee limit 3;
 select * from employee limit 2 offset 3;
 
 -- Task
+-- display all employees who receive more than 30000 salary;
 select * from employee where SALARY > 30000;
 
+-- display all male employees who receive less than 30000 salary;
 select * from employee where SEX='M' and SALARY < 30000;
 
+-- display all male and female employees who receive less than 30000 salary;
 select * from employee where SALARY < 30000;
 
-select * from employee;
+-- Display all employees who receives a salary
+select * from employee where SALARY IS NOT NULL;
 
-select * from employee where SALARY > 0;
+-- Display employee who doesnt receive a salary
+select * from employee where SALARY IS NULL;
+
+-- Sorting Data
+/* ASC - Ascending Order (A-z) or (lowest value to highest value)
+   DESC - Descending Order (z-a) or (highest value to lowest value) 
+   Default order in mysql is ascending
+   */
+   
+-- ORDER BY is used to sort the data in mysql
+select * from employee order by Fname ASC;
+select * from employee order by Fname DESC;
+
+select * from employee order by Fname ASC, Lname ASC;
+
 
 
