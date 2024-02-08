@@ -232,8 +232,24 @@ select * from employee where SALARY IS NULL;
 -- ORDER BY is used to sort the data in mysql
 select * from employee order by Fname ASC;
 select * from employee order by Fname DESC;
-
 select * from employee order by Fname ASC, Lname ASC;
 
+-- Task2
+-- select an employee who is receiving highest salary
+SELECT * FROM employee WHERE salary = (SELECT MAX(salary) FROM employee);
 
+-- select an employee who is receiving  lowest salary
+SELECT * FROM employee WHERE salary = (SELECT MIN(salary) FROM employee);
+
+-- select top five employess who are receiving highest salary
+SELECT * FROM employee ORDER BY salary DESC LIMIT 5;
+
+-- select employee who is receiving second lowest salary
+SELECT * FROM employee ORDER BY salary ASC LIMIT 1 OFFSET 1;
+
+-- select female employee who is receiving highest salary
+SELECT * FROM employee WHERE SEX = 'F' ORDER BY salary DESC LIMIT 1;
+
+-- select male employee who is receiving lowest salary
+SELECT * FROM employee WHERE SEX = 'M' ORDER BY salary ASC LIMIT 1;
 
