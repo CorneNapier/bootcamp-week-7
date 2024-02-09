@@ -1,4 +1,3 @@
--- Like keyword
 -- between
 
 -- mySQL Alias
@@ -37,3 +36,11 @@ FROM employee where SEX='M';
 
 -- Display how many male and how many female employees are working in your company?
 select sex, count(*) as 'No of Emp' from employee where sex is not null group by sex;
+
+-- Like keyword
+select * from employee where fname like 'J%'; -- name starts with J
+select * from employee where fname like '%n'; -- name ends with n
+select * from employee where fname like '_o%'; -- second letter in name is o
+
+
+
