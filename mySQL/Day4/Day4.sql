@@ -253,3 +253,8 @@ SELECT * FROM employee WHERE SEX = 'F' ORDER BY salary DESC LIMIT 1;
 -- select male employee who is receiving lowest salary
 SELECT * FROM employee WHERE SEX = 'M' ORDER BY salary ASC LIMIT 1;
 
+-- select the fname and lname of all employees
+select Fname, Lname from Employee;
+
+-- select fname, lname and salary for all male employees
+select Fname, Lname, SALARY from Employee where SEX='M';
